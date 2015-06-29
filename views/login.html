@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Mafia Game - Sign in to the mafia game to play.">
+    <meta name="author" content="Andy Tung">
+    <link rel="icon" href="favicon.ico">
+    <title>Sign in - Mafia Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="stylesheets/login.css" rel="stylesheet">
+</head>
+<body>
+<!-- -------------------------------------------------------------------- -->
+
+<div class="wrapper">
+
+    <!-- show any messages that come back with authentication -->
+    <% if (message.length > 0) { %>
+    <div class="alert alert-danger"><%= message %></div>
+    <% } %>
+
+    <div class="jumbotron text-center">
+
+        <div>
+            <h1 class="title"><span class="fa fa-sign-in"></span> MAFIA GAME</h1>
+        </div>
+
+        <form action="/login" method="post">
+            <div class="form-group">
+                <label for="inputUsername">Username</label>
+                <input type="text" class="form-control text-center" id="inputUsername" name="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <label for="inputPassword">Password</label>
+                <input type="password" class="form-control text-center" id="inputPassword" name="password" placeholder="Password">
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Remember me
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary"><span class="fa fa-user"></span> Sign In</button>
+            <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span> Sign Up</a>
+        </form>
+    </div>
+
+    <div class="push"></div>
+</div>
+<div class="footer">
+    <div class="text-center ">
+        <p>Created by Andy Tung, Derek Chan, Eleanor Wong, Connie Ma, and Harris Lin.<br>
+            Liscensed under MIT.<br>
+            Based off the <a href="http://sc2mafia.wikia.com/wiki/StarCraft_II_Mafia_Wiki">custom game</a> by
+            <strong>DarkRevenant</strong> on the Starcraft II engine.<br>
+            Please visit out <a href="https://github.com/mobcore/mafia-game">Github repository</a> for
+            the open sourced version.</p>
+    </div>
+</div>
+
+<!-- -------------------------------------------------------------------- -->
+<!-- Bootstrap core JavaScript -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
