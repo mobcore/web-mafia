@@ -1,5 +1,7 @@
-// app/models/user.js
-// load the things we need
+/**
+ * This is the model for the json string that will be saved in our database
+ */
+
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
 
@@ -10,10 +12,24 @@ var userSchema = mongoose.Schema({
         email: String,
         username: String,
         password: String
+    },
+    status: {
+        role: String,
+        invulnerability: Boolean,
+        blockImmunity: Boolean,
+        visitors: [String],
+        doused: Boolean,
+        blocked: Boolean,
+        healed: Boolean,
+        alive: Boolean,
+        vote: String,
+        target: String,
+        lastwill: String
     }
 
 });
 
+// encrpyts the password
 userSchema.methods.generateHash = function (password) {
     return bcrypt.hashSync(password, bcrypt.genSaltSync(8));
 };
