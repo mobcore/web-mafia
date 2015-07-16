@@ -52,7 +52,7 @@ db.once('open', function () {
 
 //Required setup for passport
 app.use(session({
-    secret: 'whenyougayyoufeelitintherainbow',
+    secret: process.env.SESSION_SECRET || 'whenyougayyoufeelitintherainbow',
     httpOnly: true,
     resave: false,
     saveUninitialized: false,

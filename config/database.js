@@ -3,6 +3,6 @@
  */
 module.exports = {
 
-    'url' : 'mongodb://localhost/mafiadb'
+    'url' : process.env.MONGOHQ_URL || 'mongodb://localhost/mafiadb'
 
 };

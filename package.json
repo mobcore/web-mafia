@@ -1,10 +1,11 @@
 {
   "name": "web-mafia",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Web Version of Mafia Game",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "mocha"
   },
   "author": "Andy Tung",
   "license": "MIT",
@@ -25,5 +26,9 @@
     "passport-local": "1.0.0",
     "serve-favicon": "2.2.1",
     "socket.io": "1.3.5"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "mocha": "^2.2.5"
   }
 }
