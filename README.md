@@ -1,5 +1,7 @@
 # Web Mafia
 
+[![Join the chat at https://gitter.im/mobcore/web-mafia](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mobcore/web-mafia?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
  Web Mafia is a game based off of the [custom game](http://sc2mafia.wikia.com/wiki/StarCraft_II_Mafia_Wiki) by __DarkRevenant__ on the Starcraft II engine.
 
 ## Installation
