@@ -7,7 +7,6 @@ var User = require('../models/user');
  */
 router.get('/userlist', function (req, res) {
     User.find(function (err, users) {
-        console.log(users);
         res.json(users);
     });
 });

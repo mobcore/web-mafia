@@ -4,6 +4,7 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
+var exphbs  = require('express-handlebars');
 var app = express();
 
 //Socket.io
@@ -36,8 +37,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //Setting up templating engine
-app.set('view engine', 'html');
-app.engine('html', require('ejs').renderFile);
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 
 //Connect to mongoDB

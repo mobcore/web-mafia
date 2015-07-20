@@ -1,3 +1,10 @@
+**19.07.2015**
+
+Refractored view engine to handlebars.
+- As a result lobby.handlebars is deprecated.
+- lobby.handlebars will be in the future refractored to implement angular spa.
+- Therefore, this change is safe to merge.
+
 **16.07.2015**
 
 Updated to structure of the project.
@@ -18,10 +25,8 @@ Note that nothing works yet.
 **26.06.2015**
 
 Inital skeleton of the web server application for the mafia game in NodeJS.
-
-Includes the following:
  - Expressjs as the base framework
  - Passportjs for authentication and authorisation
  - Mongoosejs for using the MongoDB database
 
- Bluebird and Socket.io are two npm packages installed but not used yet.
+Bluebird and Socket.io are two npm packages installed but not used yet.
