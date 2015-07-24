@@ -30,11 +30,10 @@
 
         <!-- LOCAL INFORMATION -->
         <div class="well text-center">
-            <h3><span class="fa fa-user"></span> Your info</h3>
+            <h3><span class="fa fa-user"></span> <%= user.local.username %></h3>
 
             <p>
-                <strong>id</strong>: <%= user._id %><br>
-                <strong>username</strong>: <%= user.local.username %><br>
+				<!-- <strong>id</strong>: <%= user._id %><br> -->
                 <strong>invulnerability</strong>: <%= user.status.invulnerability %><br>
                 <strong>block immunity</strong>: <%= user.status.blockImmunity %><br>
                 <strong>vote</strong>: <%= user.status.vote %><br>
