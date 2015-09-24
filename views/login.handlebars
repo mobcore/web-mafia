@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Mafia Game - Sign in to the mafia game to play.">
-    <meta name="author" content="Andy Tung">
-    <link rel="icon" href="favicon.ico">
-    <title>Sign in - Mafia Game</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-    <!-- Custom styles for this template -->
-    <link href="stylesheets/login.css" rel="stylesheet">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="Mafia Game - Sign in to the mafia game to play.">
+  <meta name="author" content="Andy Tung">
+  <link rel="icon" href="favicon.ico">
+  <title>Sign in - Mafia Game</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="stylesheets/login.css">
 </head>
+
 <body>
-<!-- -------------------------------------------------------------------- -->
 
 <div class="wrapper">
 
     <!-- show any messages that come back with authentication -->
-    <% if (message.length > 0) { %>
-    <div class="alert alert-danger"><%= message %></div>
-    <% } %>
+    {{#if message}}
+    <div class="alert alert-danger">{{message}}</div>
+    {{/if}}
 
     <div class="jumbotron text-center">
 
@@ -69,5 +70,7 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 </body>
+
 </html>

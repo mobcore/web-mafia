@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="Mafia Game - Sign in to the mafia game to play.">
+  <meta name="author" content="Andy Tung">
+  <link rel="icon" href="favicon.ico">
+  <title>Sign in - Mafia Game</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="stylesheets/lobby.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="page-header text-center">
+      <h1>
+        <span class="fa fa-anchor"></span> Lobby</h1>
+      <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+    <div class="row">
+      <!-- LOCAL INFORMATION -->
+      <div class="well text-center">
+        <h3>
+          <span class="fa fa-user"></span> Your info</h3>
+        <p>
+          <strong>id</strong>:
+          <%= user._id %>
+            <br>
+            <strong>username</strong>:
+            <%= user.local.username %>
+              <br>
+              <strong>invulnerability</strong>:
+              <%= user.status.invulnerability %>
+                <br>
+                <strong>block immunity</strong>:
+                <%= user.status.blockImmunity %>
+                  <br>
+                  <strong>vote</strong>:
+                  <%= user.status.vote %>
+                    <br>
+                    <strong>target</strong>:
+                    <%= user.status.target %>
+                      <br>
+                      <strong>last will</strong>:
+                      <%= user.status.lastwill %>
+                        <br>
+                        <strong>email</strong>:
+                        <%= user.local.email %>
+        </p>
+      </div>
+      <div class="well text-center">
+        <a href="/lobby" class="btn btn-default">Start Game</a>
+        <a href="/lobby" class="btn btn-default">Target Player</a>
+        <a href="/lobby" class="btn btn-default">Vote Player</a>
+        <a href="/lobby" class="btn btn-default">Update Last Will</a>
+      </div>
+      <div class="page-header text-center">
+        <h2>
+          <span class="fa fa-anchor"></span> Game Status</h2>
+      </div>
+      <div class="well text-center">
+        <div id="userList">
+          <table>
+            <thead>
+              <th>Username</th>
+              <th>Vote Count</th>
+              <th>Alive or Dead</th>
+              <th>Last Will</th>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="page-header text-center">
+      <h2>
+        <span class="fa fa-anchor"></span> Game Message</h2>
+    </div>
+  </div>
+  <!-- -------------------------------------------------------------------- -->
+  <!-- Bootstrap core JavaScript -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="/javascripts/lobby.js"></script>
+</body>
+
+</html>
