@@ -53,11 +53,10 @@ db.once('open', function () {
 
 //Required setup for passport
 app.use(session({
-    secret: process.env.SESSION_SECRET || 'whenyougayyoufeelitintherainbow',
+    secret: process.env.SESSION_SECRET || 'whenyoufeelitintherainbow',
     httpOnly: true,
     resave: false,
     saveUninitialized: false,
-//    cookie: { secure: false },
     store: new mongoStore({ mongooseConnection: db })
 })); // session secret
 app.use(passport.initialize());
